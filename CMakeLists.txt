@@ -19,8 +19,9 @@ if(COVERAGE)
 endif()
 
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-undefined" )
-add_definitions("-pthread --std=c++1y -Wall -Werror")
+add_definitions("-pthread --std=c++17 -Wall -Werror")
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_subdirectory(bin)
+add_subdirectory(lib)
 add_subdirectory(test)
